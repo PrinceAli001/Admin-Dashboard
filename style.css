@@ -11,6 +11,11 @@ body{
     width: 100vw;
     height: 100vh;
 }
+img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
 #sidebar svg{
     width: 30px;
     height: 30px;
@@ -150,12 +155,14 @@ main{
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
     background-color: #d1d5db;
+    overflow: auto;
 }
 #body-main-cards{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(12,1fr);
     padding: 0 10px 10px 20px;
+    overflow: hidden;
 }
 #card-container{
     grid-area: 2/1/13/2;
@@ -172,6 +179,7 @@ main{
     margin-bottom: 10px;
 }
 .main-cards{
+    display: grid;
     padding: 30px 20px 25px 20px;
     border-left: 8px solid orange;
     background-color: #ffffff;
@@ -196,18 +204,17 @@ main{
 #money{
     grid-area: 7/2/10/3;
 }
-#heads{
+.heads{
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 3px;
+    align-self: self-end;
 }
-#bodies{
-    margin-bottom: 11%;
-}
-#actions{
+.actions{
     display: flex;
     gap: 25px;
     justify-content: flex-end;
+    align-self: self-end;
 }
 #body-side-cards{
     display: grid;
@@ -250,11 +257,38 @@ main{
     display: grid;
     padding-left: 5px;
 }
-#topping{
+.topping{
     align-self: self-end;
     font-size: .9rem;
     font-weight: 600;
 }
-#lorem{
+.lorem{
     font-size: .8rem;
+}
+#trending{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr repeat(4,2fr);
+    margin: 0 20px 0 10px;
+}
+#trend{
+    align-self: self-end;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+#pic-and-names{
+    grid-row: 2/span 4;
+    display: grid;
+    grid-template: repeat(4,1fr)/ 1fr;
+    padding: 25px 10px 25px 25px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.name-pics{
+    display: flex;
+    align-items: center;
+    gap: 5%;
 }
