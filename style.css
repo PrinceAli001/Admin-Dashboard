@@ -21,9 +21,13 @@ img{
     height: 30px;
     fill: white;
 }
+#sidebar svg:hover{
+    fill: #dc2626;
+}
 header svg{
     width: 20px;
     height: 20px;
+    fill: #ffffff;
 }
 main svg{
     width: 23px;
@@ -32,9 +36,9 @@ main svg{
 #sidebar{
     grid-area: 1/1/13/3;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(240px, 1fr);
     grid-template-rows: repeat(12,1fr);
-    background-color: blue;
+    background-color: red;
     padding: 10px 0 0 10px;
 }
 #dashboard{
@@ -54,7 +58,7 @@ main svg{
 }
 #interactions{
     grid-row: 2/8;
-    padding: 40px 0 0 10px ;
+    padding: 40px 10px 0 10px ;
 }
 #interactions div{
     display: flex;
@@ -64,6 +68,11 @@ main svg{
     margin: 10px 0 20px 10px;
     font-size: 1.2rem;
     font-weight: 600;
+}
+#interactions div:hover{
+    color: #dc2626;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 #help{
     grid-row: 8/12;
@@ -78,12 +87,19 @@ main svg{
     font-size: 1.2rem;
     font-weight: 600;
 }
+#help div:hover{
+    color: #dc2626;
+    background-color: #ffffff;
+    cursor: pointer;
+}
 header{
     grid-area: 1/3/3/13;
     display: grid;
     grid-template-rows: repeat(2,1fr);
     padding: 0 30px 10px 30px;
     box-shadow: 0px 2px 10px black;
+    background-color: black;
+    color: #ffffff;
 }
 #top{
     display: flex;
@@ -101,7 +117,6 @@ header{
 }
 #input-search:focus{
     outline-color: #0000ff;
-    box-shadow: 2px 2px 3px #000000;
 }
 #bell{
     margin-left: 10%;
@@ -137,10 +152,15 @@ header{
     font-size: 1rem;
     font-weight: 600;
     padding: 10px 20px;
-    background-color: #0000ff;
+    background-color: #dc2626;
     border: none;
     border-radius: 25px;
     color: #ffffff;
+}
+.btn:active,.btn:hover{
+    background-color: #ffffff;
+    color: #dc2626;
+    border: 1px solid #dc2626;
 }
 #first-btn{
     padding: 10px 30px;
@@ -291,4 +311,16 @@ main{
     display: flex;
     align-items: center;
     gap: 5%;
+}
+#douchebag,#bishop{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-image: url(Images/douchebag.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#bishop{
+    background-image: url(Images/bishop.jpg);
 }
